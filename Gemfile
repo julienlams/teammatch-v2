@@ -31,6 +31,7 @@ gem "jbuilder"
 #Geocoding
 gem "geocoder"
 
+gem 'rails-i18n', '~> 7.0'
 
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"

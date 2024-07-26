@@ -15,8 +15,8 @@ User.destroy_all
 # Array of user data
 users_data = [
   { email: "hello@hotmail.com", password: "123456", password_confirmation: "123456", name: "Stephanie" },
-  { email: "hello1@hotmail.com", password: "123456", password_confirmation: "123456", name: "Arnaud" },
-  { email: "hello2@hotmail.com", password: "123456", password_confirmation: "123456", name: "Julien" }
+  { email: "hello1@hotmail.com", password: "123456", password_confirmation: "123456", name: "Angelica" },
+  { email: "hello2@hotmail.com", password: "123456", password_confirmation: "123456", name: "Audrey" }
 ]
 
 # Create 30 other users with random first names
@@ -126,7 +126,7 @@ sports_with_competitions = [
   {
     name: "Tennis",
     competitions: [
-      { name: "Roland Garros", city: "Paris", address: "2 Avenue Gordon Bennett, 75016 Paris", date: Date.new(2024, 5, 30), time: Time.new(2024, 5, 30, 14, 0, 0), cost: 100.0, latitude: 48.847, longitude: 2.249, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721486534/tennis_card_rhklbe.png", description: "Le prestigieux tournoi Roland Garros du calendrier tennistique.", number_of_teams: 13 },
+      { name: "Roland Garros", city: "Paris", address: "2 Avenue Gordon Bennett, 75016 Paris", date: Date.new(2025, 5, 30), time: Time.new(2025, 5, 30, 14, 0, 0), cost: 100.0, latitude: 48.847, longitude: 2.249, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721486534/tennis_card_rhklbe.png", description: "Le prestigieux tournoi Roland Garros du calendrier tennistique.", number_of_teams: 13 },
       { name: "Lyon Open", city: "Lyon", address: "155 Boulevard Stalingrad, 69006 Lyon", date: Date.new(2024, 6, 15), time: Time.new(2024, 6, 15, 10, 0, 0), cost: 50.0, latitude: 45.770, longitude: 4.860, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721486534/tennis_card_rhklbe.png", description: "Un tournoi de tennis excitant à Lyon, réunissant les meilleurs talents.", number_of_teams: 6 },
       { name: "Paris Masters", city: "Paris", address: "8 Boulevard de Bercy, 75012 Paris", date: Date.new(2024, 7, 10), time: Time.new(2024, 7, 10, 16, 0, 0), cost: 75.0, latitude: 48.838, longitude: 2.380, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721486534/tennis_card_rhklbe.png", description: "Le prestigieux Paris Masters, connu pour ses matchs compétitifs.", number_of_teams: 7 }
     ]
@@ -150,9 +150,9 @@ sports_with_competitions = [
   {
     name: "Badminton",
     competitions: [
-      { name: "France Badminton Open", city: "Paris", address: "25 Avenue Pierre de Coubertin, 75013 Paris", date: Date.new(2024, 8, 25), time: Time.new(2024, 8, 25, 10, 0, 0), cost: 45.0, latitude: 48.819, longitude: 2.361, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/badminton_card.png", description: "Le prestigieux tournoi France Badminton Open, mettant en vedette les meilleurs du sport.", number_of_teams: 9 },
-      { name: "Lyon Badminton Cup", city: "Lyon", address: "8 Avenue Jean Mermoz, 69008 Lyon", date: Date.new(2024, 9, 20), time: Time.new(2024, 9, 20, 11, 0, 0), cost: 50.0, latitude: 45.735, longitude: 4.889, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/badminton_card.png", description: "Le passionnant tournoi Lyon Badminton Cup, un événement majeur pour les fans de badminton.", number_of_teams: 7 },
-      { name: "Paris Badminton Fest", city: "Paris", address: "5 Rue Léo Delibes, 75016 Paris", date: Date.new(2024, 10, 15), time: Time.new(2024, 10, 15, 13, 0, 0), cost: 55.0, latitude: 48.866, longitude: 2.275, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/badminton_card.png", description: "Le festif tournoi de badminton Paris Fest, célébré pour son atmosphère vibrante.", number_of_teams: 8 }
+      { name: "France Badminton Open", city: "Paris", address: "25 Avenue Pierre de Coubertin, 75013 Paris", date: Date.new(2024, 8, 25), time: Time.new(2024, 8, 25, 10, 0, 0), cost: 45.0, latitude: 48.819, longitude: 2.361, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/gzvvcfkuabbvvzvsgtcl.png", description: "Le prestigieux tournoi France Badminton Open, mettant en vedette les meilleurs du sport.", number_of_teams: 9 },
+      { name: "Lyon Badminton Cup", city: "Lyon", address: "8 Avenue Jean Mermoz, 69008 Lyon", date: Date.new(2024, 9, 20), time: Time.new(2024, 9, 20, 11, 0, 0), cost: 50.0, latitude: 45.735, longitude: 4.889, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/gzvvcfkuabbvvzvsgtcl.png", description: "Le passionnant tournoi Lyon Badminton Cup, un événement majeur pour les fans de badminton.", number_of_teams: 7 },
+      { name: "Paris Badminton Fest", city: "Paris", address: "5 Rue Léo Delibes, 75016 Paris", date: Date.new(2024, 10, 15), time: Time.new(2024, 10, 15, 13, 0, 0), cost: 55.0, latitude: 48.866, longitude: 2.275, image_url: "https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721636293/gzvvcfkuabbvvzvsgtcl.png", description: "Le festif tournoi de badminton Paris Fest, célébré pour son atmosphère vibrante.", number_of_teams: 8 }
     ]
   }
 ]
@@ -230,9 +230,9 @@ Competition.all.each do |competition|
   puts "#{competition.name}: #{competition.latitude}, #{competition.longitude}"
 end
 
-# Ensure each user owns a maximum of 5 teams
+# Ensure each user owns a maximum of 3 teams
 User.all.each do |user|
-  if user.owned_teams.count > 5
-    user.owned_teams.order(created_at: :desc).limit(user.owned_teams.count - 5).destroy_all
+  if user.owned_teams.count > 3
+    user.owned_teams.order(created_at: :desc).limit(user.owned_teams.count - 3).destroy_all
   end
 end

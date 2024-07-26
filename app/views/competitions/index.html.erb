@@ -1,0 +1,81 @@
+<div>
+  <h1 class="mt-5 yellow-gradient" style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 60px;">
+    TOUTES NOS COMPETITIONS 🎉
+  </h1>
+
+  <!-- Banner -->
+  <div class="banner-competition-content py-5">
+    <div class="banner-competitions" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url(<%= asset_path('index_banner.jpg') %>);">
+
+      <h1>
+        Choisis ta compétition. <i class="fas fa-trophy" style="margin-right: 10px"></i>
+      </h1>
+    </div>
+  </div>
+
+
+  <div class="index-page">
+    <div class="main-container">
+
+        <!-- Search bar and cards -->
+       <div class="sidebar">
+    <div class="search-bar mb-4">
+  <%= form_with url: competitions_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query, params[:query], class: "form-control search-input", placeholder: "Recherche ...", aria: { label: "Search" } %>
+    <%= submit_tag "Go !", name: "", class: "btn btn-primary search-button" %>
+  <% end %>
+</div>
+
+        <div class="slide-container row">
+          <% @competitions.each do |competition| %>
+            <div class="col-lg-4 col-md-6 wrapper">
+              <%= link_to competition_path(competition), class: 'clash-card-link' do %>
+                <div class="clash-card <%= card_class(competition.sport.name) %>">
+                  <div class="clash-card__image <%= image_class(competition.sport.name) %>">
+                    <% if competition.image_url.present? %>
+                      <div class="competition-image">
+                        <img src="<%= competition.image_url %>" alt="<%= competition.name %>" />
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="clash-card__level <%= level_class(competition.sport.name) %>"><%= competition.sport.name %></div>
+                  <div class="clash-card__unit-name"><%= competition.name %></div>
+                  <div class="clash-card__unit-description">
+                    <p><i class="fa-solid fa-location-dot"></i> <%= competition.city %> </p>
+                    <p><strong class="clash-card__level <%= level_class(competition.sport.name) %>"><%= competition.teams.count %> teams constituées</strong></p>
+                  </div>
+                  <div class="clash-card__unit-stats <%= stats_class(competition.sport.name) %> clearfix">
+                    <div class="one-third">
+                      <div class="stat"><%= competition.date.strftime("%d.%m.%y") %></div>
+                      <div class="stat-value">Date</div>
+                    </div>
+                    <div class="one-third">
+                      <div class="stat"><%= competition.time.strftime("%H:%M") %></div>
+                      <div class="stat-value">Heure</div>
+                    </div>
+                    <div class="one-third no-border">
+                      <div class="stat"><%= formatted_cost(competition.cost) %></div>
+                      <div class="stat-value">Coût</div>
+                    </div>
+                  </div>
+                </div> <!-- end clash-card -->
+              <% end %>
+            </div> <!-- end wrapper -->
+          <% end %>
+        </div> <!-- end slide-container -->
+      </div> <!-- end sidebar -->
+
+
+
+      <!-- Map -->
+      <div id="map"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-map-query-value="<%= params[:query] %>">
+    </div>
+
+    </div> <!-- end main-content -->
+  </div> <!-- end container -->
+
+</div>

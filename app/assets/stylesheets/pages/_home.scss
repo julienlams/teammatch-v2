@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+// Variables
+$white: #fff;
+$blue: #176cc7;
+$banner-height: 650px;
+$transition-duration: 0.5s;
+$padding: 0.8rem;
+$font-size: 0.875rem;
+$line-height: 1.5;
+$margin-bottom: 2rem;
+$margin-top: 2rem;
+$h1-margin-bottom: 0.5rem;
+
+// Reset margins and padding for body and html
+html, body {
+  margin-top: 30px;
+  padding: 0;
+}
+
+body {
+  background: $white;
+  color: $white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.sport-icon-range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  width: 200px;
+}
+
+.sport-icon-range {
+  // Assure-toi que l'image est bien en forme ronde
+  .sport-icon {
+    border: 5px solid white; // Bordure blanche de 10px
+    border-radius: 50%;      // Bordure arrondie
+  }
+
+  // Style pour le titre en dessous de l'image
+  .circle-title {
+    font-weight: 600;
+    padding-top: 10px;
+    font-size: 16px;
+  }
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: $banner-height;
+  color: $white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), image-url('banner_XL.jpg');
+  opacity: 0.8;
+  z-index: 1;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 300px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: animateBanner 15s linear infinite;
+  }
+
+  margin-top: 60px;
+
+  .circle-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+    width: 120px;
+    height: 120px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 3px solid white;
+      overflow: hidden;
+    }
+
+    .circle-title {
+      margin-top: 10px;
+      font-size: 15px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+
+@keyframes animateBanner {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(0deg, $blue, $pink, $yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.yellow-gradient {
+  background: linear-gradient(0deg, $blue, $yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding;
+  // background-color: $white;
+  // transition: $transition-duration ease-in-out;
+  height: 150px
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 0 0 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.container {
+  margin-bottom: $margin-bottom;
+}
+
+h1 {
+  margin-bottom: $h1-margin-bottom;
+}
+
+.main-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.banner-text {
+  text-align: left;
+
+  h1 {
+    font-family: 'Days One', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1.2;
+    color: $white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $white;
+  }
+}

@@ -1,0 +1,271 @@
+@import "home";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-competitions {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  color: $white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  h1 {
+    font-family: 'Days One', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    text-align:center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: animateBanner 15s linear infinite;
+  }
+
+}
+
+.banner-competition-content {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.index-page {
+
+  .main-container {
+    display: flex;
+    position: relative;
+
+    .sidebar {
+      flex-grow: 1;
+    }
+
+    #map {
+    height: 100vh;
+    flex: 0 0 33%;
+    position: sticky;
+    top: 0;
+    }
+  }
+
+
+  .sidebar {
+    background-image: url('/assets/vecteezy_beautiful-blurred-vector-background_105252.jpg');
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin:  0 1em;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .search-button {
+    font-size: 16px;
+    border: 1px solid #176cc7;
+    border-left: none;
+    background-color: #176cc7;
+    color: #fff;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .search-button:hover {
+    background-color: #004085;
+    border-color: #003566;
+  }
+
+  .search-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #80bdff;
+  }
+
+  .slide-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .wrapper {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    // background-image: url('https://media.istockphoto.com/id/1189064346/fr/photo/carte-de-la-ville-avec-pin-pointers-3d-image-de-rendu.jpg?s=612x612&w=0&k=20&c=9SRCp-3wwPBCdXEUp8M4gRYWm7d3GJ3MQpoZqgmZQCA='); /* Image placeholder */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .clash-card {
+    background: white;
+    width: 100%;
+    margin: $card-margin;
+    border-radius: $border-radius-size + 5;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    z-index: 9999;
+
+    .clash-card__image {
+      position: relative;
+      height: 100px;
+      margin-bottom: 10px;
+      border-top-left-radius: $border-radius-size;
+      border-top-right-radius: $border-radius-size;
+
+      img {
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        top: -20px;
+        left: 50px;
+        right: 25px;
+        overflow: visible;
+      }
+    }
+
+    .clash-card__image--barbarian {
+      background-color: $blue; /* Tennis */
+    }
+
+    .clash-card__image--archer {
+      background-color: $yellow; /* Padel */
+    }
+
+    .clash-card__image--goblin {
+      background-color: $pink; /* Ping-pong */
+    }
+
+    .clash-card__image--bad {
+      background-color: $green; /* Badminton */
+    }
+
+    .clash-card__level {
+      text-transform: uppercase;
+      font-size: 8px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .clash-card__level--barbarian {
+      color: $blue;
+    }
+
+    .clash-card__level--archer {
+      color: $yellow;
+    }
+
+    .clash-card__level--goblin {
+      color: $pink;
+    }
+
+    .clash-card__level--bad {
+      color: $green;
+    }
+
+    .clash-card__unit-name {
+      font-size: 12px;
+      color: black;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .clash-card__unit-description {
+      padding: 5px;
+      margin-bottom: 5px;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .clash-card__unit-stats {
+      color: white;
+      font-weight: 700;
+      border-bottom-left-radius: $border-radius-size;
+      border-bottom-right-radius: $border-radius-size;
+
+      .one-third {
+        width: 33%;
+        float: left;
+        padding: 10px 7.5px;
+      }
+
+      .stat {
+        position: relative;
+        font-size: 10px;
+        margin-bottom: 5px;
+      }
+
+      .stat-value {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 8px;
+      }
+
+      .no-border {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@keyframes animateBanner {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,55 @@
+<!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url(<%= asset_path('banner_XL.jpg') %>);">
+  <div class="container">
+    <div class="banner-text">
+      <h1 class="my-3" style="font-family: 'Days One', sans-serif; font-weight: 400; font-style: normal; font-size: 120px;">
+        TeamMatch.
+      </h1>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-6 text-center">
+          <h2 style="margin-bottom: 40px;font-size: 18px; font-family: 'Days One', sans-serif"><strong>La plateforme pour trouver votre partenaire de jeu</strong></h2>
+        </div>
+        <div class="banner-text text-center">
+          <i class="fas fa-medal" style="font-size: 60px; color: white;"></i>
+        </div>
+      </div>
+      <div class="circle-images mt-4">
+        <div class="sport-icon-range">
+          <img src="https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721637846/fnrgbuwg2hdty9mkvmry.svg" alt="Tennis" class="sport-icon" />
+          <p class="circle-title">Tennis</p>
+        </div>
+        <div class="sport-icon-range">
+          <img src="https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721637845/d7k29gzgft2mfgfddkwf.svg" alt="Ping-Pong" class="sport-icon" />
+          <p class="circle-title">Ping-pong</p>
+        </div>
+        <div class="sport-icon-range">
+          <img src="https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721637845/osu9b7x8fcu9dzhq41vo.svg" alt="Padel" class="sport-icon" />
+          <p class="circle-title">Padel</p>
+        </div>
+        <div class="sport-icon-range">
+          <img src="https://res.cloudinary.com/dsj2h7qb7/image/upload/v1721637846/x7k6rkj3cgqbicedgbuc.svg" alt="Badminton" class="sport-icon" />
+          <p class="circle-title">Badminton</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Competitions Grid -->
+  <h1 class="mt-5 yellow-gradient" style="font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-style: normal; font-size: 60px;">
+    Top compétitions de la semaine!
+  </h1>
+
+  <!-- Button -->
+  <%= link_to ('VOIR TOUTES LES COMPETITIONS <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" /></svg>').html_safe, competitions_path, class: 'button', style: "font-size:18px; font-family: 'Bebas Neue'" %>
+
+  <div class="slide-container">
+    <%= render 'competitions/competition-card' %>
+  </div>
+</div>
+
+<!-- Footer in the layout -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

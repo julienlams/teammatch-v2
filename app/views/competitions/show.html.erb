@@ -20,7 +20,7 @@
         <h1 class="mb-5" style="color: <%= sport_color %>;">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.name %></h2>
         <p><strong><i class="fa-solid fa-trophy"></i></strong>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.sport.name %></p>
         <p><strong><i class="fa-solid fa-people-group"></i></strong>   &nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.teams.count %> équipes</p>
-        <p><strong><i class="fa-solid fa-calendar-days"></i></strong>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.date.strftime('%d %B %Y') %></p>
+        <p><strong><i class="fa-solid fa-calendar-days"></i></strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= I18n.l(@competition.date, format: :long) %></p>
         <p><strong><i class="fa-solid fa-clock"></i></strong>   &nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.time.strftime('%Hh%M') %></p>
         <p><strong><i class="fa-solid fa-location-dot"></i></strong>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @competition.address %></p>
         <%= link_to "Retour à la liste des compétitions", competitions_path, class: "btn btn-outline-primary team-button mt-3 mb-2", style: "color: #{sport_color}; border-color: #{sport_color};" %>
